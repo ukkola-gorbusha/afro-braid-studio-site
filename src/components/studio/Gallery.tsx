@@ -1,41 +1,20 @@
 import { useState } from 'react';
 import Icon from '@/components/ui/icon';
-import { WORKS, GALLERY_FILTERS } from './data';
+import { WORKS } from './data';
 
 const Gallery = () => {
-  const [filter, setFilter] = useState<string>('Все');
   const [active, setActive] = useState<number | null>(null);
-
-  const items = WORKS.filter((w) => filter === 'Все' || w.category === filter);
 
   return (
     <section id="gallery" className="py-20 md:py-28">
       <div className="container">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div>
-            <span className="font-hand text-3xl text-secondary">наши работы</span>
-            <h2 className="mt-1 text-4xl md:text-5xl font-display font-black">Галерея</h2>
-          </div>
-
-          <div className="flex flex-wrap gap-2">
-            {GALLERY_FILTERS.map((f) => (
-              <button
-                key={f}
-                onClick={() => setFilter(f)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  filter === f
-                    ? 'bg-primary text-primary-foreground'
-                    : 'bg-muted text-muted-foreground hover:text-foreground'
-                }`}
-              >
-                {f}
-              </button>
-            ))}
-          </div>
+        <div>
+          <span className="font-hand text-3xl text-secondary">наши работы</span>
+          <h2 className="mt-1 text-4xl md:text-5xl font-display font-black">Галерея</h2>
         </div>
 
         <div className="mt-10 columns-1 sm:columns-2 lg:columns-3 gap-5 [column-fill:_balance]">
-          {items.map((w) => {
+          {WORKS.map((w) => {
             const idx = WORKS.indexOf(w);
             return (
               <button
