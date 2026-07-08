@@ -64,7 +64,7 @@ const Booking = () => {
                 </div>
                 <h3 className="mt-5 text-2xl font-display font-bold">Заявка отправлена!</h3>
                 <p className="mt-2 text-muted-foreground">
-                  {name}, ждём вас {date} в {time}. Скоро позвоним для подтверждения.
+                  {name}, скоро позвоним для подтверждения.
                 </p>
                 <button
                   onClick={() => {
