@@ -8,8 +8,8 @@ const CONTACTS = [
 
 const SOCIALS = [
   { icon: 'Instagram', label: 'Instagram', href: 'https://www.instagram.com/anastasiya_dobrobraids?igsh=MWlxeGUzNzZiY3E0bg=='},
-  { icon: 'Send', label: 'Telegram' },
-  { icon: 'MessageCircle', label: 'WhatsApp' },
+  { icon: 'Send', label: 'Telegram', href: 'https://t.me/anastasiya_dobrobraids' },
+  { icon: 'MessageCircle', label: 'WhatsApp', href: 'https://wa.clck.bar/79940674349' },
 ];
 
 const Contacts = () => {
