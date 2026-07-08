@@ -1,8 +1,8 @@
 import Icon from '@/components/ui/icon';
 
 const CONTACTS = [
-  { icon: 'MapPin', label: 'Адрес', value: 'г. Москва, ул. Плетёная, 12' },
-  { icon: 'Phone', label: 'Телефон', value: '+7 (900) 123-45-67' },
+  { icon: 'MapPin', label: 'Адрес', value: 'г. Хабаровск, ул. Суворова 28Б/3 офис 81' },
+  { icon: 'Phone', label: 'Телефон', value: '+7 (994) 067-43-49' },
   { icon: 'Clock', label: 'Часы работы', value: 'Ежедневно 10:00 — 20:00' },
 ];
 
