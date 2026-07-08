@@ -39,15 +39,28 @@ const Contacts = () => {
             </div>
 
             <div className="mt-8 flex gap-3">
-              {SOCIALS.map((s) => (
-                <button
-                  key={s.label}
-                  aria-label={s.label}
-                  className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  <Icon name={s.icon} size={20} />
-                </button>
-              ))}
+              {SOCIALS.map((s) =>
+                s.href ? (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.label}
+                    className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <Icon name={s.icon} size={20} />
+                  </a>
+                ) : (
+                  <button
+                    key={s.label}
+                    aria-label={s.label}
+                    className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <Icon name={s.icon} size={20} />
+                  </button>
+                )
+              )}
             </div>
           </div>
 
