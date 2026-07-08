@@ -91,6 +91,21 @@ export const WORKS: Work[] = [
     category: 'Косы',
     title: 'Детские цветные косички',
   },
+  {
+    url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/b7ade194-71ca-49dd-8fe4-8fa047e139c3.jpg',
+    category: 'Косы',
+    title: 'Жёлтые французские косы для девочки',
+  },
+  {
+    url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/19714f26-2b74-4038-970b-4d950353aebc.jpg',
+    category: 'Кудри',
+    title: 'Каштановые голливудские локоны',
+  },
+  {
+    url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/b1b3ef34-0a38-43a1-985b-d195cda7421f.jpg',
+    category: 'Косы',
+    title: 'Блонд афрокосы с бусинами',
+  },
 ];
 
 export const GALLERY_FILTERS = ['Все', 'Косы', 'Дреды', 'Брейды', 'Кудри'] as const;
