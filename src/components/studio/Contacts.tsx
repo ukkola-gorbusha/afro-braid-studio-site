@@ -68,7 +68,7 @@ const Contacts = () => {
             <iframe
               title="Карта студии"
               className="w-full h-full grayscale-[0.3]"
-              src="https://yandex.ru/map-widget/v1/?ll=37.617635%2C55.755814&z=13"
+              src="https://yandex.com/maps/-/CTuVfAzJ"
               loading="lazy"
             />
           </div>
