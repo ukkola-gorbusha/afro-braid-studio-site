@@ -1,0 +1,100 @@
+export const NAV_LINKS = [
+  { id: 'home', label: 'Главная' },
+  { id: 'services', label: 'Услуги' },
+  { id: 'gallery', label: 'Галерея' },
+  { id: 'booking', label: 'Запись' },
+  { id: 'contacts', label: 'Контакты' },
+];
+
+export type Service = {
+  icon: string;
+  title: string;
+  desc: string;
+  price: string;
+  duration: string;
+};
+
+export const SERVICES: Service[] = [
+  {
+    icon: 'Sparkles',
+    title: 'Афрокосы & Зизи',
+    desc: 'Объёмные косы с цветными прядями — от пастели до неона.',
+    price: 'от 3 500 ₽',
+    duration: '4–6 ч',
+  },
+  {
+    icon: 'Zap',
+    title: 'Брейды',
+    desc: 'Косы по голове с чётким узором и акцентными цветами.',
+    price: 'от 2 000 ₽',
+    duration: '2–4 ч',
+  },
+  {
+    icon: 'Flame',
+    title: 'Дреды DE/SE',
+    desc: 'Двойные и одинарные дреды любой длины и палитры.',
+    price: 'от 4 000 ₽',
+    duration: '5–7 ч',
+  },
+  {
+    icon: 'Waves',
+    title: 'Голливудские кудри',
+    desc: 'Роскошные локоны на канекалоне — эффект «вау».',
+    price: 'от 2 500 ₽',
+    duration: '2–3 ч',
+  },
+  {
+    icon: 'Star',
+    title: 'Детское плетение',
+    desc: 'Яркие косички для маленьких принцесс — быстро и весело.',
+    price: 'от 1 500 ₽',
+    duration: '1–2 ч',
+  },
+  {
+    icon: 'Scissors',
+    title: 'Расплетение & уход',
+    desc: 'Аккуратно снимем и восстановим ваши волосы.',
+    price: 'от 800 ₽',
+    duration: '1 ч',
+  },
+];
+
+export type Work = {
+  url: string;
+  category: 'Косы' | 'Дреды' | 'Брейды' | 'Кудри';
+  title: string;
+};
+
+export const WORKS: Work[] = [
+  {
+    url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/6ce4616b-9275-4546-a5d2-6c45bf5656b0.jpg',
+    category: 'Кудри',
+    title: 'Блонд с голубыми прядями',
+  },
+  {
+    url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/35ec69f2-7e2d-4b50-9754-7c0d89ff855b.jpg',
+    category: 'Кудри',
+    title: 'Розовые голливудские локоны',
+  },
+  {
+    url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/98f1142c-b689-46d7-b36e-49898c43353d.jpg',
+    category: 'Брейды',
+    title: 'Фиолетово-синие брейды',
+  },
+  {
+    url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/b566c1d9-db7e-400b-a7eb-d0b2e24b1e43.jpg',
+    category: 'Брейды',
+    title: 'Боковые брейды с блондом',
+  },
+  {
+    url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/e2c2afde-51ef-490a-9ccf-bcc087686e0d.jpg',
+    category: 'Косы',
+    title: 'Детские цветные косички',
+  },
+];
+
+export const GALLERY_FILTERS = ['Все', 'Косы', 'Дреды', 'Брейды', 'Кудри'] as const;
+
+export const SERVICE_OPTIONS = SERVICES.map((s) => s.title);
+
+export const TIME_SLOTS = ['10:00', '12:00', '14:00', '16:00', '18:00'];
