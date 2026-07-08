@@ -43,7 +43,7 @@ const Contacts = () => {
                 <button
                   key={s.label}
                   aria-label={s.label}
-                  className="grid place-items-center w-12 h-12 rounded-2xl bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
                   <Icon name={s.icon} size={20} />
                 </button>
