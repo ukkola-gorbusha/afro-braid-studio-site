@@ -65,7 +65,7 @@ const Hero = () => {
             </div>
             <div className="w-px h-10 bg-border" />
             <div>
-              <div className="text-3xl font-display font-extrabold text-gradient">Ꝏ</div>
+              <div className="text-3xl font-display font-extrabold text-gradient">♾️</div>
               <div className="text-sm text-muted-foreground">цветов</div>
             </div>
           </div>
