@@ -14,7 +14,7 @@ const Services = () => {
             Услуги студии
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
-            Выбирай свой образ : 
+            Выбирай свой образ
           </p>
         </div>
 
