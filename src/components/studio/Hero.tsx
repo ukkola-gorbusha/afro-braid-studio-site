@@ -55,10 +55,14 @@ const Hero = () => {
 
           <div className="mt-10 flex items-center gap-8">
             <div>
-              <div className="text-3xl font-display font-extrabold text-gradient">3+</div>
+              <div className="text-3xl font-display font-extrabold text-gradient">6+</div>
               <div className="text-sm text-muted-foreground">лет опыта</div>
             </div>
             <div className="w-px h-10 bg-border" />
+            <div>
+              <div className="text-3xl font-display font-extrabold text-gradient">2000+</div>
+              <div className="text-sm text-muted-foreground">образов</div>
+            </div>
             <div className="w-px h-10 bg-border" />
             <div>
               <div className="text-3xl font-display font-extrabold text-gradient">∞</div>
