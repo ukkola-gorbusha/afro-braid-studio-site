@@ -25,7 +25,7 @@ export const SERVICES: Service[] = [
   {
     icon: 'Zap',
     title: 'Брейды',
-    desc: 'Косички вдоль головы с чёткими линиями и проборами.',
+    desc: 'Косички вдоль головы с чёткими линиями и проборами с канекалон и без.',
     price: 'от 600 ₽',
     duration: '2–4 ч',
   },
@@ -68,7 +68,7 @@ export type Work = {
 export const WORKS: Work[] = [
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/6ce4616b-9275-4546-a5d2-6c45bf5656b0.jpg',
-    category: 'Кудри',
+    category: 'Брейды',
     title: 'Блонд с голубыми прядями',
   },
   {
