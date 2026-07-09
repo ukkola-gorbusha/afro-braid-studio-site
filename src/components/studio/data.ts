@@ -69,7 +69,8 @@ export const WORKS: Work[] = [
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/6ce4616b-9275-4546-a5d2-6c45bf5656b0.jpg',
     category: 'Брейды',
-    title: 'Прическа "Водопад".                          Брейды с канекалоном на выпуск',
+    title: 'Прическа "Водопад",
+    title: 'Брейды с канекалоном на выпуск'
   },
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/35ec69f2-7e2d-4b50-9754-7c0d89ff855b.jpg',
