@@ -18,7 +18,7 @@ export const SERVICES: Service[] = [
   {
     icon: 'Sparkles',
     title: 'Афрокосы & Зизи',
-    desc: 'Объёмные косы с цветными прядями — от пастели до неона.',
+    desc: 'Косы с цветными прядями.',
     price: 'от 3 500 ₽',
     duration: '4–6 ч',
   },
