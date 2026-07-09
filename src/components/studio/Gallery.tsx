@@ -51,11 +51,14 @@ const Gallery = () => {
           >
             <Icon name="X" size={22} />
           </button>
-          <div className="max-w-lg w-full" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="max-w-lg w-full max-h-full overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
             <img
               src={WORKS[active].url}
               alt={WORKS[active].title}
-              className="w-full rounded-3xl neon-border animate-scale-in"
+              className="w-full max-h-[70vh] object-contain rounded-3xl neon-border animate-scale-in"
             />
             <div className="mt-4 text-center">
               <span className="text-sm text-secondary font-semibold">
