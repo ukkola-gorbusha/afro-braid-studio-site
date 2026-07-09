@@ -3,8 +3,7 @@ import Icon from '@/components/ui/icon';
 import { SERVICE_OPTIONS, TIME_SLOTS } from './data';
 import { toast } from '@/hooks/use-toast';
 
-const BOT_TOKEN = '8959184220:AAFFdBhAoOcXQRLCpxDeQVUdohyAU2McofUН';
-const CHAT_ID = '5042445572';
+const SEND_BOOKING_URL = 'https://functions.poehali.dev/3052ad13-588b-494f-9250-b08a378c70f4';
 
 const Booking = () => {
   const [service, setService] = useState('');
@@ -24,20 +23,26 @@ const Booking = () => {
       return;
     }
 
-    const message = `✨ Новая заявка с сайта afro-braid-studio\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n📅 Дата: ${date}\n⏰ Время: ${time}\n💎 Услуга: ${service}`;
-
     try {
-      await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      const res = await fetch(SEND_BOOKING_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: CHAT_ID, text: message }),
+        body: JSON.stringify({ name, phone, date, time, service }),
       });
-    } catch (error) {
-      console.error('Ошибка отправки в Telegram:', error);
-    }
 
-    setDone(true);
-    toast({ title: 'Заявка принята! 💜', description: 'Мы свяжемся с вами для подтверждения.' });
+      if (!res.ok) {
+        throw new Error('Не удалось отправить заявку');
+      }
+
+      setDone(true);
+      toast({ title: 'Заявка принята! 💜', description: 'Мы свяжемся с вами для подтверждения.' });
+    } catch (error) {
+      console.error('Ошибка отправки заявки:', error);
+      toast({
+        title: 'Не удалось отправить заявку',
+        description: 'Попробуйте ещё раз или позвоните нам напрямую.',
+      });
+    }
   };
 
   return (
