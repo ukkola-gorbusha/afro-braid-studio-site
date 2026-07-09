@@ -119,23 +119,23 @@ const Booking = () => {
                   </select>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="min-w-0">
                     <label className="text-sm font-medium mb-1.5 block">Дата</label>
                     <input
                       type="date"
                       min={today}
                       value={date}
                       onChange={(e) => setDate(e.target.value)}
-                      className="w-full rounded-2xl bg-muted border border-border px-4 py-3 text-sm outline-none focus:border-primary transition-colors"
+                      className="w-full min-w-0 rounded-2xl bg-muted border border-border px-4 py-3 text-sm outline-none focus:border-primary transition-colors"
                     />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <label className="text-sm font-medium mb-1.5 block">Время</label>
                     <select
                       value={time}
                       onChange={(e) => setTime(e.target.value)}
-                      className="w-full rounded-2xl bg-muted border border-border px-4 py-3 text-sm outline-none focus:border-primary transition-colors"
+                      className="w-full min-w-0 rounded-2xl bg-muted border border-border px-4 py-3 text-sm outline-none focus:border-primary transition-colors"
                     >
                       <option value="">—</option>
                       {TIME_SLOTS.map((t) => (

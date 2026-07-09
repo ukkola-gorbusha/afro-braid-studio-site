@@ -25,7 +25,7 @@ const Hero = () => {
             Студия креативного плетения
           </span>
 
-          <h1 className="mt-6 text-5xl md:text-7xl font-display font-black leading-[0.95]">
+          <h1 className="mt-6 text-4xl sm:text-5xl md:text-7xl font-display font-black leading-[0.95] break-words">
             Плетём
             <br />
             <span className="text-gradient">яркие эмоции</span>
@@ -55,40 +55,40 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="mt-10 flex items-center gap-8">
-            <div>
-              <div className="text-3xl font-display font-extrabold text-gradient">3+</div>
-              <div className="text-sm text-muted-foreground">лет опыта</div>
+          <div className="mt-10 flex items-center gap-4 sm:gap-8">
+            <div className="min-w-0">
+              <div className="text-2xl sm:text-3xl font-display font-extrabold text-gradient">3+</div>
+              <div className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">лет опыта</div>
             </div>
-            <div className="w-px h-10 bg-border" />
-            <div>
-             <div className="text-3xl font-display font-extrabold text-gradient">персональный</div>
-              <div className="text-sm text-muted-foreground">подход</div>
+            <div className="w-px h-10 bg-border shrink-0" />
+            <div className="min-w-0">
+             <div className="text-lg sm:text-3xl font-display font-extrabold text-gradient whitespace-nowrap">персональный</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">подход</div>
             </div>
-            <div className="w-px h-10 bg-border" />
-            <div>
-              <div className="text-3xl font-display font-extrabold text-gradient">♾️</div>
-              <div className="text-sm text-muted-foreground">цветов</div>
+            <div className="w-px h-10 bg-border shrink-0" />
+            <div className="min-w-0">
+              <div className="text-2xl sm:text-3xl font-display font-extrabold text-gradient">♾️</div>
+              <div className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">цветов</div>
             </div>
           </div>
         </div>
 
-        <div className="relative animate-scale-in">
-          <div className="grid grid-cols-2 gap-4">
+        <div className="relative animate-scale-in max-w-full overflow-hidden px-2 sm:px-0">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <img
               src={heroImages[0].url}
               alt={heroImages[0].title}
-              className="rounded-3xl object-cover w-full h-72 md:h-96 neon-border rotate-[-3deg] hover:rotate-0 transition-transform duration-500"
+              className="rounded-3xl object-cover w-full h-48 sm:h-72 md:h-96 neon-border rotate-[-3deg] hover:rotate-0 transition-transform duration-500"
             />
             <img
               src={heroImages[1].url}
               alt={heroImages[1].title}
-              className="rounded-3xl object-cover w-full h-72 md:h-96 mt-10 rotate-[3deg] hover:rotate-0 transition-transform duration-500"
+              className="rounded-3xl object-cover w-full h-48 sm:h-72 md:h-96 mt-6 sm:mt-10 rotate-[3deg] hover:rotate-0 transition-transform duration-500"
             />
           </div>
-          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 glass border border-border rounded-2xl px-5 py-3 flex items-center gap-2 whitespace-nowrap">
-            <Icon name="Star" className="text-primary" size={18} />
-            <span className="font-hand text-2xl">Твой новый вайб ждёт</span>
+          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 glass border border-border rounded-2xl px-3 sm:px-5 py-2 sm:py-3 flex items-center gap-2 whitespace-nowrap max-w-[90%]">
+            <Icon name="Star" className="text-primary shrink-0" size={18} />
+            <span className="font-hand text-lg sm:text-2xl truncate">Твой новый вайб ждёт</span>
           </div>
         </div>
       </div>
