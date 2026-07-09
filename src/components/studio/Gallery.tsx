@@ -22,11 +22,27 @@ const Gallery = () => {
                 onClick={() => setActive(idx)}
                 className="group relative mb-5 block w-full overflow-hidden rounded-3xl border border-border animate-fade-in"
               >
-                <img
-                  src={w.url}
-                  alt={w.title}
-                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                {w.type === 'video' ? (
+                  <video
+                    src={w.url}
+                    className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    muted
+                    playsInline
+                    loop
+                    autoPlay
+                  />
+                ) : (
+                  <img
+                    src={w.url}
+                    alt={w.title}
+                    className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                )}
+                {w.type === 'video' && (
+                  <div className="absolute top-3 right-3 grid place-items-center w-9 h-9 rounded-full bg-background/70 backdrop-blur-sm">
+                    <Icon name="Play" size={16} />
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
                   <div className="text-left">
                     <span className="text-xs text-secondary font-semibold">{w.category}</span>
@@ -55,11 +71,21 @@ const Gallery = () => {
             className="max-w-lg w-full max-h-full overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={WORKS[active].url}
-              alt={WORKS[active].title}
-              className="w-full max-h-[70vh] object-contain rounded-3xl neon-border animate-scale-in"
-            />
+            {WORKS[active].type === 'video' ? (
+              <video
+                src={WORKS[active].url}
+                className="w-full max-h-[70vh] object-contain rounded-3xl neon-border animate-scale-in"
+                controls
+                autoPlay
+                playsInline
+              />
+            ) : (
+              <img
+                src={WORKS[active].url}
+                alt={WORKS[active].title}
+                className="w-full max-h-[70vh] object-contain rounded-3xl neon-border animate-scale-in"
+              />
+            )}
             <div className="mt-4 text-center">
               <span className="text-sm text-secondary font-semibold">
                 {WORKS[active].category}

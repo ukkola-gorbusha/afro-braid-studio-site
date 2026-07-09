@@ -63,9 +63,16 @@ export type Work = {
   url: string;
   category: 'Косы' | 'Дреды' | 'Брейды' | 'Кудри';
   title: string;
+  type?: 'image' | 'video';
 };
 
 export const WORKS: Work[] = [
+  {
+    url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/5915a3c3-21d5-4b4b-b07d-d4957990de3a.mp4',
+    category: 'Брейды',
+    title: 'Видео работы',
+    type: 'video',
+  },
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/6ce4616b-9275-4546-a5d2-6c45bf5656b0.jpg',
     category: 'Брейды',
