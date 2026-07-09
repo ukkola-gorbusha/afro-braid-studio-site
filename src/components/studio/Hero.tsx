@@ -1,6 +1,8 @@
 import Icon from '@/components/ui/icon';
 import { WORKS } from './data';
 
+const heroImages = WORKS.filter((w) => w.type !== 'video');
+
 const scrollTo = (id: string) =>
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
@@ -74,13 +76,13 @@ const Hero = () => {
         <div className="relative animate-scale-in">
           <div className="grid grid-cols-2 gap-4">
             <img
-              src={WORKS[1].url}
-              alt={WORKS[1].title}
+              src={heroImages[0].url}
+              alt={heroImages[0].title}
               className="rounded-3xl object-cover w-full h-72 md:h-96 neon-border rotate-[-3deg] hover:rotate-0 transition-transform duration-500"
             />
             <img
-              src={WORKS[0].url}
-              alt={WORKS[0].title}
+              src={heroImages[1].url}
+              alt={heroImages[1].title}
               className="rounded-3xl object-cover w-full h-72 md:h-96 mt-10 rotate-[3deg] hover:rotate-0 transition-transform duration-500"
             />
           </div>
