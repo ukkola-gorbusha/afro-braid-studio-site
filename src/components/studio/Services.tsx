@@ -30,7 +30,7 @@ const Services = () => {
                 <Icon name={s.icon} size={26} />
               </div>
               <h3 className="mt-5 text-xl font-display font-bold">{s.title}</h3>
-              <p className="mt-2 text-muted-foreground text-sm whitespace-pre-line">{s.desc}</p>
+              <p className="mt-2 text-muted-foreground text-sm">{s.desc}</p>
 
               <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
                 <span className="text-lg font-display font-extrabold text-gradient">
