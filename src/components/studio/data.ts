@@ -69,8 +69,8 @@ export type Work = {
 export const WORKS: Work[] = [
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/5915a3c3-21d5-4b4b-b07d-d4957990de3a.mp4',
-    category: 'Брейды',
-    title: 'Видео работы',
+    category: 'Коса на карабине',
+    title: 'Коса для быстрого преображения',
     type: 'video',
   },
   {
