@@ -98,12 +98,12 @@ export const WORKS: Work[] = [
   },
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/19714f26-2b74-4038-970b-4d950353aebc.jpg',
-    category: 'Кудри',
-    title: 'Каштановые голливудские локоны',
+    category: 'Афрокудри',
+    title: 'Каштановые локоны "Ариэль"',
   },
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/b1b3ef34-0a38-43a1-985b-d195cda7421f.jpg',
-    category: 'Косы',
+    category: 'Афрокосы',
     title: 'Блонд афрокосы с бусинами',
   },
 ];
