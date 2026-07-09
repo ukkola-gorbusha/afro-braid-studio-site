@@ -79,7 +79,7 @@ export const WORKS: Work[] = [
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/98f1142c-b689-46d7-b36e-49898c43353d.jpg',
     category: 'Брейды',
-    title: 'Фиолетово-синие брейды',
+    title: 'Брейды в косы',
   },
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/b566c1d9-db7e-400b-a7eb-d0b2e24b1e43.jpg',
