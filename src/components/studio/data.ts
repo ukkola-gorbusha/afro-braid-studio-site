@@ -74,7 +74,7 @@ export const WORKS: Work[] = [
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/35ec69f2-7e2d-4b50-9754-7c0d89ff855b.jpg',
     category: 'Афрокудри',
-    title: 'Завиток "Ариэль" Нежно - розовые  локоны',
+    title: 'Завиток "Ариэль"\nНежно - розовые  локоны',
   },
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/98f1142c-b689-46d7-b36e-49898c43353d.jpg',
