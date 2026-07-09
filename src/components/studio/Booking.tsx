@@ -3,6 +3,9 @@ import Icon from '@/components/ui/icon';
 import { SERVICE_OPTIONS, TIME_SLOTS } from './data';
 import { toast } from '@/hooks/use-toast';
 
+const BOT_TOKEN = '8959184220:AAFFdBhAoOcXQRLCpxDeQVUdohyAU2McofUН';
+const CHAT_ID = '5042445572';
+
 const Booking = () => {
   const [service, setService] = useState('');
   const [date, setDate] = useState('');
@@ -15,11 +18,25 @@ const Booking = () => {
   const valid = service && date && time && name.trim() && phone.trim().length >= 6;
 
   const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {  
     e.preventDefault();
     if (!valid) {
       toast({ title: 'Заполните все поля', description: 'Проверьте форму записи.' });
       return;
     }
+
+    const message = `✨ Новая заявка с сайта afro-braid-studio\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n📅 Дата: ${date}\n⏰ Время: ${time}\n💎 Услуга: ${service}`;
+
+    try {
+      await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: CHAT_ID, text: message }),
+      });
+    } catch (error) {
+      console.error('Ошибка отправки в Telegram:', error);
+    }
+
     setDone(true);
     toast({ title: 'Заявка принята! 💜', description: 'Мы свяжемся с вами для подтверждения.' });
   };
