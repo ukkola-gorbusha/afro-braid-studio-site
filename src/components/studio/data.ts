@@ -84,7 +84,7 @@ export const WORKS: Work[] = [
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/b566c1d9-db7e-400b-a7eb-d0b2e24b1e43.jpg',
     category: 'Брейды',
-    title: 'Боковые брейды с блондом',
+    title: 'Брейды с канекалоном на висок ',
   },
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/e2c2afde-51ef-490a-9ccf-bcc087686e0d.jpg',
