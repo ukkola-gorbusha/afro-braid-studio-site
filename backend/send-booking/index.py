@@ -1,7 +1,7 @@
 import json
 import os
-import urllib.request
-import urllib.error
+
+import requests
 
 
 def handler(event: dict, context) -> dict:
@@ -56,20 +56,25 @@ def handler(event: dict, context) -> dict:
     )
 
     url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
-    payload = json.dumps({'chat_id': chat_id, 'text': message}).encode('utf-8')
-    req = urllib.request.Request(
-        url, data=payload, headers={'Content-Type': 'application/json'}, method='POST'
-    )
 
     try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            resp.read()
-    except urllib.error.HTTPError as e:
-        error_body = e.read().decode('utf-8', errors='ignore')
+        resp = requests.post(
+            url,
+            json={'chat_id': chat_id, 'text': message},
+            timeout=15,
+        )
+    except requests.RequestException as e:
         return {
             'statusCode': 502,
             'headers': headers,
-            'body': json.dumps({'error': 'Не удалось отправить уведомление в Telegram', 'details': error_body}),
+            'body': json.dumps({'error': 'Не удалось связаться с Telegram', 'details': str(e)}),
+        }
+
+    if not resp.ok:
+        return {
+            'statusCode': 502,
+            'headers': headers,
+            'body': json.dumps({'error': 'Не удалось отправить уведомление в Telegram', 'details': resp.text}),
         }
 
     return {
@@ -77,4 +82,3 @@ def handler(event: dict, context) -> dict:
         'headers': headers,
         'body': json.dumps({'success': True}),
     }
-
