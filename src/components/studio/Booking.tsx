@@ -17,8 +17,7 @@ const Booking = () => {
   const today = new Date().toISOString().split('T')[0];
   const valid = service && date && time && name.trim() && phone.trim().length >= 6;
 
-  const submit = (e: React.FormEvent) => {
-  const submit = async (e: React.FormEvent) => {  
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!valid) {
       toast({ title: 'Заполните все поля', description: 'Проверьте форму записи.' });
