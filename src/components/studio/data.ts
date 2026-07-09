@@ -89,7 +89,7 @@ export const WORKS: Work[] = [
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/e2c2afde-51ef-490a-9ccf-bcc087686e0d.jpg',
     category: 'Зизи',
-    title: 'цветные гафрированные зизи для маленьких принцесс',
+    title: 'Цветные гафрированные зизи для маленьких принцесс',
   },
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/b7ade194-71ca-49dd-8fe4-8fa047e139c3.jpg',
