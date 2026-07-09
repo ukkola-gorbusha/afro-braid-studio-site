@@ -19,7 +19,7 @@ export const SERVICES: Service[] = [
     icon: 'Sparkles',
     title: 'Афрокосы & Зизи',
     desc: 'Классические косы с ярким характером. Лёгкие тонкие косички на каждый день',
-    price: 'от 3 500 ₽',
+    price: 'от 5 500 ₽',
     duration: '4–6 ч',
   },
   {
