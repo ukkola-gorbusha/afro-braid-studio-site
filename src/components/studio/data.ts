@@ -94,7 +94,7 @@ export const WORKS: Work[] = [
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/b7ade194-71ca-49dd-8fe4-8fa047e139c3.jpg',
     category: 'Косы',
-    title: 'Жёлтые французские косы для девочки',
+    title: 'Боксерские косы с канекалоном',
   },
   {
     url: 'https://cdn.poehali.dev/projects/1515732c-45d5-436a-b5f4-687d7f8839be/bucket/19714f26-2b74-4038-970b-4d950353aebc.jpg',
