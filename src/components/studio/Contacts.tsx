@@ -64,7 +64,7 @@ const Contacts = () => {
             </div>
           </div>
 
-          <div className="relative rounded-[2rem] overflow-hidden border border-border h-80 lg:h-full min-h-[320px] neon-border">
+          <div className="relative rounded-[2rem] overflow-hidden border border-border h-64 sm:h-80 lg:h-full min-h-[260px] lg:min-h-[320px] neon-border">
             <iframe
               title="Карта студии"
               className="w-full h-full grayscale-[0.3]"

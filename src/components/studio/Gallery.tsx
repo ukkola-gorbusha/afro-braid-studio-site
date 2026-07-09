@@ -46,7 +46,7 @@ const Gallery = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
                   <div className="text-left">
                     <span className="text-xs text-secondary font-semibold">{w.category}</span>
-                    <p className="font-display font-bold whitespace-pre-line">{w.title}</p>
+                    <p className="font-display font-bold whitespace-pre-line break-words">{w.title}</p>
                   </div>
                 </div>
               </button>
@@ -90,7 +90,7 @@ const Gallery = () => {
               <span className="text-sm text-secondary font-semibold">
                 {WORKS[active].category}
               </span>
-              <p className="font-display font-bold text-xl whitespace-pre-line">{WORKS[active].title}</p>
+              <p className="font-display font-bold text-lg sm:text-xl whitespace-pre-line break-words">{WORKS[active].title}</p>
             </div>
           </div>
         </div>
