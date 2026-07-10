@@ -95,7 +95,7 @@ def handler(event: dict, context) -> dict:
                 headers={'Authorization': f'Bearer {resend_key}', 'Content-Type': 'application/json'},
                 json={
                     'from': 'Afro Braid Studio <onboarding@resend.dev>',
-                    'to': ['asdxone@gmail.com, 'dobro8live@gmail.com'],
+                    'to': ['asdxone@gmail.com,'dobro8live@gmail.com'],
                     'subject': f'Новая заявка: {name}',
                     'html': email_html,
                 },
