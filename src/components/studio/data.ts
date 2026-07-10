@@ -61,7 +61,7 @@ export const SERVICES: Service[] = [
 
 export type Work = {
   url: string;
-  category: string;
+  category: 'Косы' | 'Дреды' | 'Брейды' | 'Кудри';
   title: string;
   type?: 'image' | 'video';
 };
