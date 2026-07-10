@@ -67,6 +67,7 @@ def handler(event: dict, context) -> dict:
     telegram_sent = False
     bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
     chat_id = os.environ.get('TELEGRAM_CHAT_ID')
+    print(f'DEBUG_SECRETS: bot_token_set={bool(bot_token)} chat_id_set={bool(chat_id)} resend_set={bool(os.environ.get("RESEND_API_KEY"))}')
     if bot_token and chat_id:
         try:
             tg_resp = requests.post(
@@ -75,8 +76,10 @@ def handler(event: dict, context) -> dict:
                 timeout=8,
             )
             telegram_sent = tg_resp.ok
-        except requests.RequestException:
+            print(f'TELEGRAM_STATUS={tg_resp.status_code} TELEGRAM_BODY={tg_resp.text}')
+        except requests.RequestException as e:
             telegram_sent = False
+            print(f'TELEGRAM_EXCEPTION={e}')
 
     email_sent = False
     resend_key = os.environ.get('RESEND_API_KEY')
@@ -102,8 +105,10 @@ def handler(event: dict, context) -> dict:
                 timeout=10,
             )
             email_sent = mail_resp.ok
-        except requests.RequestException:
+            print(f'RESEND_STATUS={mail_resp.status_code} RESEND_BODY={mail_resp.text}')
+        except requests.RequestException as e:
             email_sent = False
+            print(f'RESEND_EXCEPTION={e}')
 
     cur.execute(
         f"UPDATE {schema}.bookings SET telegram_sent = %s, email_sent = %s WHERE id = %s",
